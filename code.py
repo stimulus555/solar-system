@@ -20,7 +20,7 @@ st.set_page_config(
 # === NASA APOD API ===
 API_URL = "https://api.nasa.gov/planetary/apod"
 # NOTE: Using NASA's official DEMO_KEY for reproducibility and security.
-API_KEY = "DEMO_KEY" 
+API_KEY = "eG6R1CynmBgOLFdCvMEi5s0oAeTRjXNEAYlqUifW" 
 
 @st.cache_data(ttl=3600) # Cache the data for 1 hour to prevent excessive API calls
 def fetch_apod(date_str=None):
@@ -237,4 +237,5 @@ if fetch_date:
     except Exception as e:
         st.error(f"An error occurred while fetching the APOD: {e}")
         st.info("Please ensure the date is correctly formatted (YYYY-MM-DD) and not a future date.")
+
 
